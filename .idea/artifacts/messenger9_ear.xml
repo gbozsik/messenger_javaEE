@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="ear" name="messenger9:ear">
+    <output-path>$PROJECT_DIR$/out/artifacts/messenger9_ear</output-path>
+    <root id="archive" name="messenger9_ear.ear">
+      <element id="artifact" artifact-name="messenger9" />
+    </root>
+  </artifact>
+</component>

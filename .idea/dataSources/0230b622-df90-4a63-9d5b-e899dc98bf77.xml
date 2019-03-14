@@ -1,0 +1,397 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataSource name="test">
+  <database-model serializer="dbm" dbms="H2" family-id="H2" format-version="4.14">
+    <root id="1">
+      <ServerVersion>1.4.196</ServerVersion>
+    </root>
+    <database id="2" parent="1" name="TEST">
+      <Current>1</Current>
+      <Visible>1</Visible>
+    </database>
+    <schema id="3" parent="2" name="INFORMATION_SCHEMA"/>
+    <schema id="4" parent="2" name="PUBLIC">
+      <Current>1</Current>
+      <Visible>1</Visible>
+    </schema>
+    <table id="5" parent="4" name="TEST_FEE"/>
+    <table id="6" parent="4" name="TEST_PRODUCT"/>
+    <table id="7" parent="4" name="TEST_PRODUCT_CATEGORY"/>
+    <table id="8" parent="4" name="TEST_PRODUCT_PART"/>
+    <table id="9" parent="4" name="TEST_PRODUCT_PART_DETAIL"/>
+    <table id="10" parent="4" name="TEST_SHIPMENT"/>
+    <column id="11" parent="5" name="ID">
+      <Position>1</Position>
+      <DataType>BIGINT(19)|-5s</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+      <DefaultExpression>(NEXT VALUE FOR PUBLIC.SYSTEM_SEQUENCE_8E43EF85_C59B_45BD_8CC1_E1C835B76422)</DefaultExpression>
+    </column>
+    <column id="12" parent="5" name="CREATED_AT">
+      <Position>2</Position>
+      <DataType>TIMESTAMP(23,10)|93s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="13" parent="5" name="CREATED_BY">
+      <Position>3</Position>
+      <DataType>VARCHAR(3)|12s</DataType>
+    </column>
+    <column id="14" parent="5" name="MODIFIED_AT">
+      <Position>4</Position>
+      <DataType>TIMESTAMP(23,10)|93s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="15" parent="5" name="MODIFIED_BY">
+      <Position>5</Position>
+      <DataType>VARCHAR(3)|12s</DataType>
+    </column>
+    <column id="16" parent="5" name="VERSION">
+      <Position>6</Position>
+      <DataType>BIGINT(19)|-5s</DataType>
+    </column>
+    <column id="17" parent="5" name="VALUE">
+      <Position>7</Position>
+      <DataType>DOUBLE(17)|8s</DataType>
+    </column>
+    <index id="18" parent="5" name="PRIMARY_KEY_E">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>ID</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="19" parent="5" name="CONSTRAINT_E">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>ID</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="20" parent="6" name="ID">
+      <Position>1</Position>
+      <DataType>BIGINT(19)|-5s</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+      <DefaultExpression>(NEXT VALUE FOR PUBLIC.SYSTEM_SEQUENCE_EB678A99_1F20_4F37_AB59_253C4511A89D)</DefaultExpression>
+    </column>
+    <column id="21" parent="6" name="CREATED_AT">
+      <Position>2</Position>
+      <DataType>TIMESTAMP(23,10)|93s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="22" parent="6" name="CREATED_BY">
+      <Position>3</Position>
+      <DataType>VARCHAR(3)|12s</DataType>
+    </column>
+    <column id="23" parent="6" name="MODIFIED_AT">
+      <Position>4</Position>
+      <DataType>TIMESTAMP(23,10)|93s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="24" parent="6" name="MODIFIED_BY">
+      <Position>5</Position>
+      <DataType>VARCHAR(3)|12s</DataType>
+    </column>
+    <column id="25" parent="6" name="VERSION">
+      <Position>6</Position>
+      <DataType>BIGINT(19)|-5s</DataType>
+    </column>
+    <column id="26" parent="6" name="CODE">
+      <Position>7</Position>
+      <DataType>VARCHAR(255)|12s</DataType>
+    </column>
+    <column id="27" parent="6" name="COLOR">
+      <Position>8</Position>
+      <DataType>VARCHAR(255)|12s</DataType>
+    </column>
+    <column id="28" parent="6" name="DESCRIPTION">
+      <Position>9</Position>
+      <DataType>VARCHAR(255)|12s</DataType>
+    </column>
+    <column id="29" parent="6" name="NAME">
+      <Position>10</Position>
+      <DataType>VARCHAR(255)|12s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="30" parent="6" name="PARTNUMBER">
+      <Position>11</Position>
+      <DataType>BIGINT(19)|-5s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="31" parent="6" name="PPPRICE">
+      <Position>12</Position>
+      <DataType>DOUBLE(17)|8s</DataType>
+    </column>
+    <column id="32" parent="6" name="VALID_FROM">
+      <Position>13</Position>
+      <DataType>TIMESTAMP(23,10)|93s</DataType>
+    </column>
+    <column id="33" parent="6" name="VALID_TO">
+      <Position>14</Position>
+      <DataType>TIMESTAMP(23,10)|93s</DataType>
+    </column>
+    <column id="34" parent="6" name="PCATEGORY_ID">
+      <Position>15</Position>
+      <DataType>BIGINT(19)|-5s</DataType>
+    </column>
+    <index id="35" parent="6" name="PRIMARY_KEY_2">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>ID</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <index id="36" parent="6" name="UK_IYJXS2EV85TQ1Y1AV8K84IDW4_INDEX_2">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>CODE</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <index id="37" parent="6" name="UK_Q62WSN0PJGGHY8QJGX9WL0XOA_INDEX_2">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>PARTNUMBER</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <index id="38" parent="6" name="FK_5BQJ833MYWNYH5BXOT8UD0BMX_INDEX_2">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>PCATEGORY_ID</ColNames>
+    </index>
+    <key id="39" parent="6" name="CONSTRAINT_2">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>ID</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <key id="40" parent="6" name="UK_IYJXS2EV85TQ1Y1AV8K84IDW4_INDEX_2">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>CODE</ColNames>
+    </key>
+    <key id="41" parent="6" name="UK_Q62WSN0PJGGHY8QJGX9WL0XOA_INDEX_2">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>PARTNUMBER</ColNames>
+    </key>
+    <foreign-key id="42" parent="6" name="FK_5BQJ833MYWNYH5BXOT8UD0BMX">
+      <ColNames>PCATEGORY_ID</ColNames>
+      <RefTableName>TEST_PRODUCT_CATEGORY</RefTableName>
+      <RefKeyName>CONSTRAINT_E7</RefKeyName>
+      <RefColNames>ID</RefColNames>
+    </foreign-key>
+    <column id="43" parent="7" name="ID">
+      <Position>1</Position>
+      <DataType>BIGINT(19)|-5s</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+      <DefaultExpression>(NEXT VALUE FOR PUBLIC.SYSTEM_SEQUENCE_640ECD48_60E0_4B9C_9E79_2CB29D824C06)</DefaultExpression>
+    </column>
+    <column id="44" parent="7" name="CREATED_AT">
+      <Position>2</Position>
+      <DataType>TIMESTAMP(23,10)|93s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="45" parent="7" name="CREATED_BY">
+      <Position>3</Position>
+      <DataType>VARCHAR(3)|12s</DataType>
+    </column>
+    <column id="46" parent="7" name="MODIFIED_AT">
+      <Position>4</Position>
+      <DataType>TIMESTAMP(23,10)|93s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="47" parent="7" name="MODIFIED_BY">
+      <Position>5</Position>
+      <DataType>VARCHAR(3)|12s</DataType>
+    </column>
+    <column id="48" parent="7" name="VERSION">
+      <Position>6</Position>
+      <DataType>BIGINT(19)|-5s</DataType>
+    </column>
+    <column id="49" parent="7" name="CATEGORY_NAME">
+      <Position>7</Position>
+      <DataType>VARCHAR(255)|12s</DataType>
+    </column>
+    <column id="50" parent="7" name="VALIDFROM">
+      <Position>8</Position>
+      <DataType>TIMESTAMP(23,10)|93s</DataType>
+    </column>
+    <index id="51" parent="7" name="PRIMARY_KEY_E7">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>ID</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="52" parent="7" name="CONSTRAINT_E7">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>ID</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="53" parent="8" name="ID">
+      <Position>1</Position>
+      <DataType>BIGINT(19)|-5s</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+      <DefaultExpression>(NEXT VALUE FOR PUBLIC.SYSTEM_SEQUENCE_45F9FDC9_3709_4D08_B50D_3F59CF3B244A)</DefaultExpression>
+    </column>
+    <column id="54" parent="8" name="CREATED_AT">
+      <Position>2</Position>
+      <DataType>TIMESTAMP(23,10)|93s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="55" parent="8" name="CREATED_BY">
+      <Position>3</Position>
+      <DataType>VARCHAR(3)|12s</DataType>
+    </column>
+    <column id="56" parent="8" name="MODIFIED_AT">
+      <Position>4</Position>
+      <DataType>TIMESTAMP(23,10)|93s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="57" parent="8" name="MODIFIED_BY">
+      <Position>5</Position>
+      <DataType>VARCHAR(3)|12s</DataType>
+    </column>
+    <column id="58" parent="8" name="VERSION">
+      <Position>6</Position>
+      <DataType>BIGINT(19)|-5s</DataType>
+    </column>
+    <column id="59" parent="8" name="PARTID">
+      <Position>7</Position>
+      <DataType>VARCHAR(255)|12s</DataType>
+    </column>
+    <column id="60" parent="8" name="VALID_FROM">
+      <Position>8</Position>
+      <DataType>TIMESTAMP(23,10)|93s</DataType>
+    </column>
+    <column id="61" parent="8" name="VALID_TO">
+      <Position>9</Position>
+      <DataType>TIMESTAMP(23,10)|93s</DataType>
+    </column>
+    <column id="62" parent="8" name="PRODUCT_PART_NUMBER">
+      <Position>10</Position>
+      <DataType>BIGINT(19)|-5s</DataType>
+    </column>
+    <index id="63" parent="8" name="PRIMARY_KEY_C">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>ID</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <index id="64" parent="8" name="FK_THHY7IWW5ATTAT4B8GCN3M5GM_INDEX_C">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>PRODUCT_PART_NUMBER</ColNames>
+    </index>
+    <key id="65" parent="8" name="CONSTRAINT_C">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>ID</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="66" parent="8" name="FK_THHY7IWW5ATTAT4B8GCN3M5GM">
+      <ColNames>PRODUCT_PART_NUMBER</ColNames>
+      <RefTableName>TEST_PRODUCT</RefTableName>
+      <RefColNames>PARTNUMBER</RefColNames>
+    </foreign-key>
+    <column id="67" parent="9" name="ID">
+      <Position>1</Position>
+      <DataType>BIGINT(19)|-5s</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+      <DefaultExpression>(NEXT VALUE FOR PUBLIC.SYSTEM_SEQUENCE_D8BFFCE3_3FB4_4B00_A752_E8FD03397C8C)</DefaultExpression>
+    </column>
+    <column id="68" parent="9" name="CREATED_AT">
+      <Position>2</Position>
+      <DataType>TIMESTAMP(23,10)|93s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="69" parent="9" name="CREATED_BY">
+      <Position>3</Position>
+      <DataType>VARCHAR(3)|12s</DataType>
+    </column>
+    <column id="70" parent="9" name="MODIFIED_AT">
+      <Position>4</Position>
+      <DataType>TIMESTAMP(23,10)|93s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="71" parent="9" name="MODIFIED_BY">
+      <Position>5</Position>
+      <DataType>VARCHAR(3)|12s</DataType>
+    </column>
+    <column id="72" parent="9" name="VERSION">
+      <Position>6</Position>
+      <DataType>BIGINT(19)|-5s</DataType>
+    </column>
+    <column id="73" parent="9" name="DESCRIPTION">
+      <Position>7</Position>
+      <DataType>VARCHAR(255)|12s</DataType>
+    </column>
+    <column id="74" parent="9" name="PRODUCTPART_ID">
+      <Position>8</Position>
+      <DataType>BIGINT(19)|-5s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <index id="75" parent="9" name="PRIMARY_KEY_B">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>ID</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <index id="76" parent="9" name="FK_G3L4LHTEXCK34PD8XJ6GKGOFK_INDEX_B">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>PRODUCTPART_ID</ColNames>
+    </index>
+    <key id="77" parent="9" name="CONSTRAINT_B">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>ID</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="78" parent="9" name="FK_G3L4LHTEXCK34PD8XJ6GKGOFK">
+      <ColNames>PRODUCTPART_ID</ColNames>
+      <RefTableName>TEST_PRODUCT_PART</RefTableName>
+      <RefKeyName>CONSTRAINT_C</RefKeyName>
+      <RefColNames>ID</RefColNames>
+    </foreign-key>
+    <column id="79" parent="10" name="ID">
+      <Position>1</Position>
+      <DataType>BIGINT(19)|-5s</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+      <DefaultExpression>(NEXT VALUE FOR PUBLIC.SYSTEM_SEQUENCE_EC04EEEB_F666_43FE_8CC6_3C228DC1D818)</DefaultExpression>
+    </column>
+    <column id="80" parent="10" name="CREATED_AT">
+      <Position>2</Position>
+      <DataType>TIMESTAMP(23,10)|93s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="81" parent="10" name="CREATED_BY">
+      <Position>3</Position>
+      <DataType>VARCHAR(3)|12s</DataType>
+    </column>
+    <column id="82" parent="10" name="MODIFIED_AT">
+      <Position>4</Position>
+      <DataType>TIMESTAMP(23,10)|93s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="83" parent="10" name="MODIFIED_BY">
+      <Position>5</Position>
+      <DataType>VARCHAR(3)|12s</DataType>
+    </column>
+    <column id="84" parent="10" name="VERSION">
+      <Position>6</Position>
+      <DataType>BIGINT(19)|-5s</DataType>
+    </column>
+    <column id="85" parent="10" name="CODE">
+      <Position>7</Position>
+      <DataType>VARCHAR(255)|12s</DataType>
+    </column>
+    <column id="86" parent="10" name="FEE_ID">
+      <Position>8</Position>
+      <DataType>BIGINT(19)|-5s</DataType>
+    </column>
+    <index id="87" parent="10" name="PRIMARY_KEY_D">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>ID</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <index id="88" parent="10" name="FK_ADXOACE5DOLSDAYEPR4J7KHWI_INDEX_D">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>FEE_ID</ColNames>
+    </index>
+    <key id="89" parent="10" name="CONSTRAINT_D">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>ID</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="90" parent="10" name="FK_ADXOACE5DOLSDAYEPR4J7KHWI">
+      <ColNames>FEE_ID</ColNames>
+      <RefTableName>TEST_FEE</RefTableName>
+      <RefKeyName>CONSTRAINT_E</RefKeyName>
+      <RefColNames>ID</RefColNames>
+    </foreign-key>
+  </database-model>
+</dataSource>

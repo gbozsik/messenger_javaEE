@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence xmlns="http://java.sun.com/xml/ns/persistence" version="2.0">
+    <persistence-unit name="puForBaseDataTest" transaction-type="JTA">
+        <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
+        <jta-data-source>jdbc_petdb</jta-data-source>
+        <properties>
+            <!-- Configuring JDBC properties -->
+            <!--<property name="javax.persistence.jdbc.url" value="jdbc:h2:mem:test'"/>-->
+            <!--<property name="javax.persistence.jdbc.url" value="jdbc:h2:~/test"/>-->
+            <!--<property name="javax.persistence.jdbc.driver" value="org.h2.Driver"/>-->
+            <property name="javax.persistence.jdbc.url" value="jdbc:sqlserver://localhost:1433;database=petdb'"/>
+            <property name="javax.persistence.jdbc.driver" value="com.microsoft.sqlserver.jdbc.SQLServerDriver"/>
+            <property name="hibernate.transaction.jta.platform" value="org.hibernate.service.jta.platform.internal.SunOneJtaPlatform" />
+            <property name="javax.persistence.jdbc.user" value="sa"/>
+            <property name="javax.persistence.jdbc.password" value="Kisnyu10"/>
+
+            <!-- Hibernate properties -->
+            <property name="hibernate.dialect" value="org.hibernate.dialect.SQLServer2012Dialect"/>
+            <!--<property name="hibernate.dialect" value="org.hibernate.dialect.H2Dialect"/>-->
+            <property name="hibernate.hbm2ddl.auto" value="update"/>
+            <property name="hibernate.format_sql" value="false"/>
+            <property name="hibernate.show_sql" value="true"/>
+        </properties>
+    </persistence-unit>
+</persistence>
